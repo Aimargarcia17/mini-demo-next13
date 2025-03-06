@@ -1,0 +1,5 @@
+/* styles/dashboardPage.module.css */
+.pageContainer {
+  display: flex;
+  min-height: 100vh;
+}

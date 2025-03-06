@@ -1,0 +1,38 @@
+/* Diseño de la cuadrícula */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Tres columnas con el mismo tamaño */
+  gap: 20px; /* Espacio entre las tarjetas */
+  margin-top: 20px; /* Margen superior para separar un poco de la parte superior */
+}
+
+/* Estilo para las tarjetas */
+.card {
+  background-color: #ecf0f1; /* Color de fondo gris claro */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para el efecto de elevación */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el cursor */
+}
+
+/* Cambiar el estilo al pasar el cursor sobre la tarjeta */
+.card:hover {
+  transform: translateY(-5px); /* Elevar la tarjeta un poco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el cursor */
+}
+
+/* Títulos de los artículos */
+.card h3 {
+  color: black; /* Títulos en color negro */
+  font-size: 1.2rem; /* Tamaño de fuente ligeramente más grande */
+  margin-bottom: 10px; /* Espacio debajo del título */
+  font-weight: 600; /* Fuente más gruesa */
+}
+
+/* Cuerpo del artículo */
+.card p {
+  color: black; /* Texto en negro */
+  font-size: 1rem; /* Tamaño de fuente estándar */
+  line-height: 1.6; /* Mejora la legibilidad */
+  margin: 0; /* Elimina márgenes innecesarios */
+}
