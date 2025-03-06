@@ -1,4 +1,5 @@
 // pages/dashboard.js
+'use client'
 import { Suspense } from 'react';
 import Dashboard from '../../components/dashboard/dashboard';  // Asegúrate de que la ruta sea correcta
 import Sidebar from '../../components/sidebar/sidebar';
