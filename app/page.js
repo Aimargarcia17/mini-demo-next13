@@ -8,7 +8,7 @@ export default function Home() {
         <form className={styles.form}>
           <input type="text" placeholder="Usuario" className={styles.input} />
           <input type="password" placeholder="Contraseña" className={styles.input} />
-          <button type="submit" href="/hola"className={styles.button}>Ingresar</button>
+          <a href="/DashboardPage"className={styles.button}>Ingresar</a>
         </form>
       </div>
     </div>
