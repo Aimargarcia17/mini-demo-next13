@@ -1,23 +1,30 @@
+// app/components/article/page.js
 import styles from './article.module.css';
 
+async function fakeDelay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export default async function Articles() {
+  // await fakeDelay(2000);
+
   try {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts'); 
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
     if (!res.ok) {
       throw new Error('Error al obtener los artículos');
     }
-    const articles = await res.json();
+    const articlesData = await res.json();
 
     const userRes = await fetch('https://jsonplaceholder.typicode.com/users');
     if (!userRes.ok) {
       throw new Error('Error al obtener los usuarios');
     }
-    const users = await userRes.json();
+    const usersData = await userRes.json();
 
     return (
       <div className={styles.grid}>
-        {articles.map((article) => {
-          const user = users.find(user => user.id === article.userId);
+        {articlesData.map((article) => {
+          const user = usersData.find((user) => user.id === article.userId);
           const userPhoto = user ? `https://i.pravatar.cc/150?u=${user.id}` : 'https://via.placeholder.com/150';
 
           return (
@@ -31,6 +38,6 @@ export default async function Articles() {
       </div>
     );
   } catch (error) {
-    return <div>Error: {error.message}</div>; // Mostrar mensaje de error si la API falla
+    return <div>Error: {error.message}</div>;
   }
 }

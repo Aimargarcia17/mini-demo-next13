@@ -1,6 +1,4 @@
-
-import { useEffect } from 'react';
-import styles from './sidebarLoading.module.css';
+import styles from './articleLoading.module.css';
 export default function Loading() {
   return (
     <div className={styles.loadingContainer}>
