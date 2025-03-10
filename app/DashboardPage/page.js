@@ -8,9 +8,8 @@ import styles from './dashboardPage.module.css';
 export default function DashboardPage() {
   return (
     <div className={styles.pageContainer}>
-      <Suspense fallback={<Loading />}>
-        <Sidebar />
-      </Suspense>
+      
+      <Sidebar />
       <Dashboard />
     </div>
   );
