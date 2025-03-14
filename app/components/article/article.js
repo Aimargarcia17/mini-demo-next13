@@ -8,7 +8,6 @@ async function fakeDelay(ms) {
 
 export default async function Articles() {
   // await fakeDelay(2000);
-
   try {
     // Usamos la paginación para traer solo los primeros 9 artículos
     const res = await fetch('https://jsonplaceholder.typicode.com/posts?_page=1&_limit=9');

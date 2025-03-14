@@ -1,3 +1,5 @@
+// app/login/page.js
+
 import styles from './page.module.css';
 
 export default function Home() {
@@ -5,12 +7,20 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.loginBox}>
         <h2 className={styles.title}>Iniciar Sesión</h2>
-        <form className={styles.form}>
-          <input type="text" placeholder="Usuario" className={styles.input} />
-          <input type="password" placeholder="Contraseña" className={styles.input} />
-          <a href="/DashboardPage"className={styles.button}>Ingresar</a>
+        <form className={styles.form} action="/api/login" method="POST">
+          <input
+            type="text"
+            placeholder="Usuario"
+            className={styles.input}
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            className={styles.input}
+          />
+          <a href="/DashboardPage" className={styles.button}>Ingresar</a>
         </form>
       </div>
     </div>
   );
-} 
+}
